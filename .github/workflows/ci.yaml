@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: false
+          submodules: true
       - run: nix build -L .
       - uses: actions/upload-artifact@v4
         with:
