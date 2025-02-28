@@ -16,11 +16,12 @@
         {
           kernelsu = {
             # Add your own kernel definition here
-            my-kernel = {
+            default = {
               arch = "arm64";
               anyKernelVariant = "kernelsu";
               clangVersion = "latest";
 
+              # we already do this ourself
               kernelSU.enable = false;
               susfs.enable = false;
 
