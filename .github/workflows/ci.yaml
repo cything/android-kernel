@@ -1,4 +1,4 @@
-name: build and cache packages
+name: build and upload kernel
 on:
   workflow_dispatch:
   push:
