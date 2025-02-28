@@ -30,6 +30,7 @@
               ];
               kernelImageName = "Image";
               kernelSrc = ./.;
+              oemBootImg = ./oem-boot.img;
             };
           };
         };
