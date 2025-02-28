@@ -19,7 +19,8 @@
             default = {
               arch = "arm64";
               anyKernelVariant = "kernelsu";
-              clangVersion = "latest";
+              # clangVersion = "latest";
+              clangVersion = "null"; # build with gcc
 
               # we already do this ourself
               kernelSU.enable = false;
