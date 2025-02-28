@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  build-packages:
+  build-kernel:
     runs-on: ubuntu-latest
     continue-on-error: false
     steps:
