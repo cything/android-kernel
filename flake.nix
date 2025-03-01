@@ -4,6 +4,19 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     nix-kernelsu-builder.url = "github:cything/ksu-builder";
   };
+
+  nixConfig = {
+    extra-substituters = [
+      "https://cache.garnix.io"
+      "https://cything.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+      "cything.cachix.org-1:xqW1W5NNL+wrM9wfSELb0MLj/harD2ZyB4HbdaMyvPI="
+    ];
+    builders-use-substitutes = true;
+  };
+
   outputs =
     { flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {

@@ -20,12 +20,18 @@ jobs:
           remove-codeql: 'true'
           remove-docker-images: 'true'
           build-mount-path: /nix
+
       - name: Install Nix
         uses: cachix/install-nix-action@v30
+        with:
+          install_url: https://releases.nixos.org/nix/nix-2.26.2/install
+          extra_nix_config: 'accept-flake-config = true'
+
       - name: Sync repository
         uses: actions/checkout@v4
         with:
           persist-credentials: false
+
       - run: nix build -L .
       - uses: actions/upload-artifact@v4
         with:
