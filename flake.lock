@@ -139,16 +139,16 @@
         "nvfetcher": "nvfetcher"
       },
       "locked": {
-        "lastModified": 1740637214,
-        "narHash": "sha256-ZguLnTv0qa9IOaI75+QAze8B4sLnuhhBLus4aVfzN2Y=",
-        "owner": "xddxdd",
-        "repo": "nix-kernelsu-builder",
-        "rev": "1656c2e805faf1a2091fcde2535fec66ce62e9d1",
+        "lastModified": 1740846155,
+        "narHash": "sha256-n+AVz57IHHXwuYiilWygHjYUxl0hF+gCnv2UMnxaR5Y=",
+        "owner": "cything",
+        "repo": "ksu-builder",
+        "rev": "764f2c6863f76a8f1739b55ba1e2da83937af114",
         "type": "github"
       },
       "original": {
-        "owner": "xddxdd",
-        "repo": "nix-kernelsu-builder",
+        "owner": "cything",
+        "repo": "ksu-builder",
         "type": "github"
       }
     },
