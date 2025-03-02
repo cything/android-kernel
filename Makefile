@@ -449,8 +449,8 @@ HOST_LFS_LDFLAGS := $(shell getconf LFS_LDFLAGS 2>/dev/null)
 HOST_LFS_LIBS := $(shell getconf LFS_LIBS 2>/dev/null)
 
 ifneq ($(LLVM),)
-HOSTCC	= clang
-HOSTCXX	= clang++
+HOSTCC	= /usr/bin/sccache clang
+HOSTCXX	= /usr/bin/sccache clang++
 else
 HOSTCC	= gcc
 HOSTCXX	= g++
@@ -470,7 +470,7 @@ KBUILD_HOSTLDLIBS   := $(HOST_LFS_LIBS) $(HOSTLDLIBS)
 # Make variables (CC, etc...)
 CPP		= $(CC) -E
 ifneq ($(LLVM),)
-CC		= clang
+CC		= /usr/bin/sccache clang
 LD		= ld.lld
 AR		= llvm-ar
 NM		= llvm-nm
