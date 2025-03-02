@@ -44,6 +44,9 @@
               kernelImageName = "Image";
               kernelSrc = ./.;
               oemBootImg = ./assets/oem-boot.img;
+              kernelMakeFlags = [
+                "LTO=thin"
+              ];
             };
           };
         };
